@@ -179,8 +179,11 @@ override fun onNewToken(token: String) {
     }
 ```
 設定點擊行為:建立 Intent 和 PendingIntent：點擊通知後將開啟 MainActivity。 PendingIntent 用於包裹 Intent，允許將其傳遞給通知系統。
+
 建立通知: 設定通知的圖示、標題、內容、聲音以及點擊行為(點擊前往app)。
+
 建立通知通道：通知必須綁定到一個通道。創建一個名為emotionAlerts 的通知通道。重要性等級為 IMPORTANCE_HIGH，表示通知會以響鈴或振動的方式打斷用戶。
+
 發送通知:透過 notificationManager.notify 發送通知。
 ```kotlin
     private fun sendNotification(title: String?, messageBody: String?) {
