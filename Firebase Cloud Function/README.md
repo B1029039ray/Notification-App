@@ -70,7 +70,7 @@ db = firestore.client()
 ```
 ### 發送到 LINE chatbot
 send_notifications 函數負責發送通知。如果 emotion_index 大於 80，則執行通知操作。
-發送到 LINE chatbot： 
+發送到 LINE chatbot：
 line_token：LINE bot 的存取令牌，用於認證請求。 
 to_user：接收訊息的使用者 ID。 
 message：訊息的內容，包含要傳送的情緒指數。 
