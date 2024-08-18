@@ -14,3 +14,8 @@ firebase login
 firebase init
 ```
 #### 5.選擇功能(選擇Functions)
+![image](README_image/choose_functions.png)
+#### 6.選擇要用哪個project
+![image](README_image/choose_project.png)
+#### 7.語言選擇python
+![image](README_image/choose_language.png)
