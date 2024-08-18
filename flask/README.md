@@ -59,7 +59,7 @@ def notify():
     </script>
 
 ```
-#### 使用 jinja 語法接收flask接收到的情緒指數並顯示在網頁上
+#### 使用 jinja 語法插入flask接收到的情緒指數並顯示在網頁上
 ```html
 <body>
     <h1>情緒指數警告</h1>
