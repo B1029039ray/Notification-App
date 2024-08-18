@@ -49,3 +49,32 @@ def notify():
         return jsonify({"error": "Missing emotion index"}), 400
 ```
 ### index.html
+#### 每10秒刷新一次頁面，及時更新情緒指數
+```html
+    <script>
+        // 每10秒刷新一次頁面
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 10000);  // 10秒
+    </script>
+
+```
+#### 使用 jinja 語法接收flask接收到的情緒指數並顯示在網頁上
+```html
+<body>
+    <h1>情緒指數警告</h1>
+
+    {% if emotion_index is not none %}
+    <div class="emotion-box">
+        <h2>最新的情緒指數：{{ emotion_index }}</h2>
+        {% if emotion_index > 80 %}
+        <p>⚠️ 注意：情緒指數超過 80，請留意！</p>
+        {% else %}
+        <p>情緒指數在安全範圍內。</p>
+        {% endif %}
+    </div>
+    {% else %}
+    <p>尚未接收到情緒指數。</p>
+    {% endif %}
+</body>
+```
