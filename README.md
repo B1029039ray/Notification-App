@@ -11,3 +11,5 @@ LINE的通知傳遞方式主要根據user id來傳遞。由於沒有建構取得
 ### Web
 與Web連接方式使用url來連接，因此，在Flask運行時，需要使用ngrok來做臨時的通道，使FCM可以透過url訪問本地Flask。
 
+# 結果
+![](README_image/app_result.mp4)
