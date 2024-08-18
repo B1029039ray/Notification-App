@@ -30,5 +30,8 @@ firebase deploy
 ```
 # LINE
 #### 1.登入LINE Developers
-#### 2.2.	創建一個頻道
- 
+#### 2.創建一個頻道
+![image](README_image/channels.png)
+#### 3.前往Basic settings並滑到底部取得user id
+![image](README_image/basic_settings.png)
+![image](README_image/user_id.png)
