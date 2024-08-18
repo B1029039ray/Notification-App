@@ -78,3 +78,7 @@ def notify():
     {% endif %}
 </body>
 ```
+####啟動flask
+```
+python app.py
+```
