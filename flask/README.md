@@ -10,10 +10,10 @@
 ```
 ngrok config add-authtoken $YOUR_AUTHTOKEN
 ```
-![image](README_imgae/ngrok_authtoken.png)
+![image](README_image/ngrok_authtoken.png)
 #### 6.啟動ngrok(一般的flask url是127.0.0.1:5000)
 ```
 ngrok http http://127.0.0.1:5000
 ```
 #### 7.取得ngrok的公開url
-![image](README_imgae/ngrok_url.png)
+![image](README_image/ngrok_url.png)
