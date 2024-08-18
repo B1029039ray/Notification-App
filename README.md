@@ -9,5 +9,5 @@ LINE的通知傳遞方式主要根據user id來傳遞。由於沒有建構取得
 與Android app連接採用的是"特定主題發送通知"的方式，因此當主題契合時，會將通知發送給所有有訂閱這個主題的所有使用者。
 
 ### FCM 連接方式-Web
-與Web連接方式使用url來連接，因此，在Flask運行時，需要使用ngrok來做臨時的通道，使url可以訪問本地Flask。
+與Web連接方式使用url來連接，因此，在Flask運行時，需要使用ngrok來做臨時的通道，使FCM可以透過url訪問本地Flask。
 
