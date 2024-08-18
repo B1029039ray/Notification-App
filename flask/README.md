@@ -17,3 +17,35 @@ ngrok http http://127.0.0.1:5000
 ```
 #### 7.取得ngrok的公開url
 ![image](README_image/ngrok_url.png)
+
+#app.py
+#### 1.安裝flask
+```
+pip install flask
+```
+使用 render_template 函數將 index.html 模板檔案呈現給用戶，同時將全域變數 `latest_emotion_index` 的值傳遞給模板，以便在網頁上顯示最新的情緒指數。
+```python
+@app.route('/')
+def index():
+    # 傳遞情緒指數給模板
+    return render_template('index.html', emotion_index=latest_emotion_index)
+```
+Flask 應用的 /notify route，用於接收從 Cloud Function 發送的 POST 請求。
+```python
+@app.route('/notify', methods=['POST'])
+def notify():
+    global latest_emotion_index  # 確保可以修改全域變數
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Invalid data"}), 400
+
+    # 解析來自 Cloud Function 的資料
+    emotion_index = data.get('emotion_index')
+    if emotion_index is not None:
+        latest_emotion_index = int(emotion_index)  # 更新全域變數
+        print(f"Received emotion index: {latest_emotion_index}")
+        return jsonify({"message": "Notification received"}), 200
+    else:
+        return jsonify({"error": "Missing emotion index"}), 400
+```
+#index.html
