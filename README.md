@@ -15,3 +15,4 @@ LINE的通知傳遞方式主要根據user id來傳遞。由於沒有建構取得
 
 https://github.com/user-attachments/assets/44b7ba64-3fe2-4708-acdd-823a2b6a2134
 
+![](README_image/web_result.png)
