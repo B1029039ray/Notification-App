@@ -73,11 +73,15 @@ db = firestore.client()
 ```
 ### 發送到 LINE chatbot
 send_notifications 函數負責發送通知。如果 emotion_index 大於 80，則執行通知操作。
-發送到 LINE chatbot：
-line_token：LINE bot 的存取令牌，用於認證請求。 
-to_user：接收訊息的使用者 ID。 
-message：訊息的內容，包含要傳送的情緒指數。 
-headers：請求頭部訊息，包括內容類型和授權令牌。 
+ 
+line_token：LINE bot 的存取令牌，用於認證請求。
+
+to_user：接收訊息的使用者 ID。
+
+message：訊息的內容，包含要傳送的情緒指數。
+
+headers：請求頭部訊息，包括內容類型和授權令牌。
+
 requests.post：向 LINE API 發送 POST 請求以推送訊息。請求失敗，則列印錯誤訊息；成功，則列印成功訊息。
 ```python
 def send_notifications(emotion_index):
@@ -107,7 +111,8 @@ def send_notifications(emotion_index):
             print("Successfully sent message to LINE")
 ```
 ### 發送 Firebase Cloud Message (FCM)
-fcm_message：建立一個 FCM 訊息對象，包含情緒指數，並將其發佈到 emotionAlerts 主題。 
+fcm_message：建立一個 FCM 訊息對象，包含情緒指數，並將其發佈到 emotionAlerts 主題。
+
 messaging.send(fcm_message)：傳送 FCM 訊息，並列印成功訊息。
 ```python
         fcm_message = messaging.Message(
@@ -132,9 +137,13 @@ messaging.send(fcm_message)：傳送 FCM 訊息，並列印成功訊息。
             print("Successfully sent data to Flask")
 ```
 on_emotion_written 是一個 Firestore 觸發器函數，當 emotions 集合中的文件被寫入（建立或更新）時會觸發函數。
+
 @on_document_written(document="emotions/{docId}")：指定當 emotions 集合中的任意文件被寫入時觸發函數。 
-event 參數：包含事件的詳細信息，包括文件的變更前後的快照。 
-document = event.data.after.to_dict()：取得文件寫入後的數據，並將其轉換為字典格式。 
+
+event 參數：包含事件的詳細信息，包括文件的變更前後的快照。
+
+document = event.data.after.to_dict()：取得文件寫入後的數據，並將其轉換為字典格式。
+
 檢查文件：如果文件存在，取得 emotionIndex 欄位的值。 send_notifications(emotion_index)：呼叫 send_notifications 函數，根據情緒指數發送通知。
 ```python
 @on_document_written(document="emotions/{docId}")
