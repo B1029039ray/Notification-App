@@ -58,8 +58,11 @@ cred_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', '<path/to/serviceAccount
 ```
 # main.py
 初始化 Firebase Admin SDK，使code能夠與 Firebase 服務互動。
-cred_path：取得 Firebase 服務帳號的 JSON 檔案路徑。路徑從環境變數 GOOGLE_APPLICATION_CREDENTIALS 取得，若不存在，則使用預設值。 
+
+cred_path：取得 Firebase 服務帳號的 JSON 檔案路徑。路徑從環境變數 GOOGLE_APPLICATION_CREDENTIALS 取得，若不存在，則使用預設值。
+
 cred：使用服務帳號的 JSON 檔案建立license，用於認證。 firebase_admin.initialize_app(cred)：使用上面license初始化 Firebase 應用程式。
+
 db = firestore.client()：初始化 Firestore 用戶端，允許與 Firestore 資料庫進行互動。
 ```python
 cred_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', '<path/to/serviceAccountKey.json>')
