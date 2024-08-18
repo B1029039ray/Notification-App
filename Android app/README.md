@@ -222,4 +222,4 @@ override fun onNewToken(token: String) {
         notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build())
     }
 ```
-## *注意`FirebaseMessaging.getInstance().subscribeToTopic("emotionAlerts")`的topic需要與Firebase的topic名稱相同!
+### *注意`FirebaseMessaging.getInstance().subscribeToTopic("emotionAlerts")`的topic需要與Firebase的topic名稱相同!
