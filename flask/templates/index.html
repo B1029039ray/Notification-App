@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情緒指數顯示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .emotion-box {
+            background-color: #ffcccb;
+            border: 2px solid #e74c3c;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // 每10秒刷新一次頁面
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 10000);  // 10秒
+    </script>
+</head>
+<body>
+    <h1>情緒指數警告</h1>
+
+    {% if emotion_index is not none %}
+    <div class="emotion-box">
+        <h2>最新的情緒指數：{{ emotion_index }}</h2>
+        {% if emotion_index > 80 %}
+        <p>⚠️ 注意：情緒指數超過 80，請留意！</p>
+        {% else %}
+        <p>情緒指數在安全範圍內。</p>
+        {% endif %}
+    </div>
+    {% else %}
+    <p>尚未接收到情緒指數。</p>
+    {% endif %}
+</body>
+</html>
