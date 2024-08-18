@@ -5,6 +5,6 @@
 
 ### 2.build-gradle.kts增加firebase dependencies
 build-gradle.kts(Notification app)
-```
+```kotlin
 id("com.google.gms.google-services") version "4.4.2" apply false
 ```
