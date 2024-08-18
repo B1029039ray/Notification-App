@@ -3,4 +3,17 @@
 ### ngrok
 #### 1.登入ngrok
 #### 2.下載ngrok
- 
+![image](README_image/download_ngrok.png)
+#### 3.將ngrok解壓縮並移至flask目錄底下
+#### 4.點開ngrok.exe
+#### 5.驗證你的ngrok帳號
+```
+ngrok config add-authtoken $YOUR_AUTHTOKEN
+```
+![image](README_imgae/ngrok_authtoken.png)
+#### 6.啟動ngrok(一般的flask url是127.0.0.1:5000)
+```
+ngrok http http://127.0.0.1:5000
+```
+#### 7.取得ngrok的公開url
+![image](README_imgae/ngrok_url.png)
