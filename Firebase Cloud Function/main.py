@@ -28,7 +28,7 @@ def send_notifications(emotion_index):
             "messages": [
                 {
                     "type": "text",
-                    "text": f"情绪指数超过 80: {emotion_index}"
+                    "text": f"情緒指數超過 80: {emotion_index}"
                 }
             ]
         }
