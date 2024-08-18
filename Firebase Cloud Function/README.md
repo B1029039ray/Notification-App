@@ -19,3 +19,16 @@ firebase init
 ![image](README_image/choose_project.png)
 #### 7.語言選擇python
 ![image](README_image/choose_language.png)
+#### 8.按yes直到結束(裝完後此時就可以開始寫要佈署上functions的code)
+#### 寫完要佈署時，先進入該資料夾(預設資料夾名functions)
+```
+cd functions
+```
+#### 佈署
+```
+firebase deploy
+```
+# LINE
+#### 1.登入LINE Developers
+#### 2.2.	創建一個頻道
+ 
