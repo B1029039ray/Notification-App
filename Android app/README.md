@@ -16,7 +16,7 @@ implementation("com.google.firebase:firebase-messaging")
 implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 implementation("com.google.firebase:firebase-analytics")
 ```
-dependencies外再增加一行
+##### dependencies外再增加一行
 ```kotlin
 apply(plugin = "com.google.gms.google-services")
 ```
