@@ -45,7 +45,7 @@ firebase deploy
 line_token = Channel access token
 to_user = user id
 ```
-#Firebase
+# Firebase
 #### 1.在firebase取得服務帳號的 JSON 檔案(點擊產生私密金鑰)
 ![image](README_image/service_account.png)
 
